@@ -24,6 +24,21 @@ Check out the other examples in the repo to understand how to scale your impact 
 
 Watch [this video](https://youtu.be/2TIXl2rlA6Q) to internalize how important this is for next generation engineering. View the brief anthropic documentation [here](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/tutorials#use-claude-as-a-unix-style-utility) and a more comprehensive write up on [agentic coding here](https://www.anthropic.com/engineering/claude-code-best-practices). The Claude Code team is doing incredible work.
 
+## Repository Overview
+
+```
+README.md                 – main instructions and script descriptions
+claude_code_is_programmable_*.{sh,js,py} – Claude Code examples
+voice_to_claude_code.py   – voice-driven Claude Code assistant
+anthropic_search.py       – web search via Claude with optional domain filtering
+bonus/                    – advanced Notion + OpenAI Agent SDK demos
+ai_docs/                  – reference documentation for Claude Code and tools
+tests/                    – pytest integration test
+archive/aider             – archived examples that used Aider
+```
+
+Use the `reset.sh` script to clean up files created by the demos.
+
 ## Setup
 
 ### Configuration Files
@@ -207,6 +222,15 @@ The script produces:
 - Each search counts as one use, regardless of the number of results returned
 - Searches cost $10 per 1,000 searches, plus standard token costs for search-generated content
 - Domain filtering doesn't need https:// prefixes and automatically includes subdomains
+
+## Learning Path
+
+1. **Run the simple scripts**: Start with `claude_code_is_programmable_1.sh` and `claude_code_is_programmable_2.py`.
+2. **Understand Notion integration**: Study `claude_code_is_programmable_3.py` and the scripts in the `bonus/` directory.
+3. **Explore voice control** using `voice_to_claude_code.py`.
+4. **Experiment with web search** via `anthropic_search.py`.
+5. **Check the docs** in `ai_docs/` for details on Claude Code and the OpenAI Agents SDK.
+6. **Advance to agentic workflows** with the Notion agent in `bonus/`.
 
 Built with ❤️ by [IndyDevDan](https://www.youtube.com/@indydevdan) with [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview), and [Principled AI Coding](https://agenticengineer.com/principled-ai-coding)
 
