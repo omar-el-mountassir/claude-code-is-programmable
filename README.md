@@ -14,8 +14,8 @@ First off - run these right away to understand how important this is:
 # Claude Code example (with only Write and Edit tools allowed)
 claude -p "make a hello.js script that prints hello" --allowedTools "Write" "Edit"
 
-# Aider equivalent example
-aider --message "make a hello.js script that prints hello" hello.js
+# Archived Aider examples
+The original Aider-based examples from earlier versions of this repository can now be found in [`archive/aider`](archive/aider).
 ```
 
 Here's the big trick - with Claude Code, you can call ANY TOOL IN ANY ORDER IN NATURAL LANGUAGE.
@@ -23,8 +23,6 @@ Here's the big trick - with Claude Code, you can call ANY TOOL IN ANY ORDER IN N
 Check out the other examples in the repo to understand how to scale your impact with this feature.
 
 Watch [this video](https://youtu.be/2TIXl2rlA6Q) to internalize how important this is for next generation engineering. View the brief anthropic documentation [here](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/tutorials#use-claude-as-a-unix-style-utility) and a more comprehensive write up on [agentic coding here](https://www.anthropic.com/engineering/claude-code-best-practices). The Claude Code team is doing incredible work.
-
-You can also use [Aider](https://aider.chat/) as a programmable ai coding tool to do similar things although it's strictly limited to AI Coding (which is still incredibly useful). Check out the documentation [here](https://aider.chat/docs/scripting.html).
 
 ## Setup
 
@@ -71,14 +69,12 @@ You can also use [Aider](https://aider.chat/) as a programmable ai coding tool t
   ```bash
   sh claude_code_is_programmable_1.sh
   ```
-- `aider_is_programmable_1.sh`: Similar script using Aider to create a "hello.js" file.
-  ```bash
-  sh aider_is_programmable_1.sh
-  ```
 - `reset.sh`: Utility script to clean up branches and directories created by the demo scripts.
   ```bash
   sh reset.sh
   ```
+
+Archived examples that used the Aider tool are now located in [`archive/aider`](archive/aider).
 
 ### Python Files
 - `claude_code_is_programmable_2.py`: Python script that executes Claude Code to create a TypeScript CLI todo app, with permissions for Edit, Replace, Bash, and Create tools.
@@ -89,10 +85,6 @@ You can also use [Aider](https://aider.chat/) as a programmable ai coding tool t
   ```bash
   uv run claude_code_is_programmable_3.py "My Notion Page"
   ```
-- `aider_is_programmable_2.py`: Python script that uses Aider to create a TypeScript todo application with git operations.
-  ```bash
-  uv run aider_is_programmable_2.py
-  ```
 - `anthropic_search.py`: A self-contained Python script for searching the web using Anthropic's Claude AI with web search capabilities.
   ```bash
   ./anthropic_search.py "your search query"
@@ -102,10 +94,6 @@ You can also use [Aider](https://aider.chat/) as a programmable ai coding tool t
 - `claude_code_is_programmable_2.js`: JavaScript version of the Claude Code script that creates a TypeScript todo app, with permissions for Edit, Replace, Bash, and Create tools.
   ```bash
   bun claude_code_is_programmable_2.js
-  ```
-- `aider_is_programmable_2.js`: JavaScript version of the Aider script for creating a TypeScript todo app with git operations.
-  ```bash
-  bun aider_is_programmable_2.js
   ```
 
 ### Voice to Claude Code
