@@ -8,5 +8,4 @@
 ## PARALLEL READ the following files:
 
 README.md
-aider_is_*.py
 claude_code_*.py

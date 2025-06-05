@@ -14,8 +14,8 @@ First off - run these right away to understand how important this is:
 # Claude Code example (with only Write and Edit tools allowed)
 claude -p "make a hello.js script that prints hello" --allowedTools "Write" "Edit"
 
-# Aider equivalent example
-aider --message "make a hello.js script that prints hello" hello.js
+# Archived Aider examples
+The original Aider-based examples from earlier versions of this repository can now be found in [`archive/aider`](archive/aider).
 ```
 
 Here's the big trick - with Claude Code, you can call ANY TOOL IN ANY ORDER IN NATURAL LANGUAGE.
@@ -24,7 +24,20 @@ Check out the other examples in the repo to understand how to scale your impact 
 
 Watch [this video](https://youtu.be/2TIXl2rlA6Q) to internalize how important this is for next generation engineering. View the brief anthropic documentation [here](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/tutorials#use-claude-as-a-unix-style-utility) and a more comprehensive write up on [agentic coding here](https://www.anthropic.com/engineering/claude-code-best-practices). The Claude Code team is doing incredible work.
 
-You can also use [Aider](https://aider.chat/) as a programmable ai coding tool to do similar things although it's strictly limited to AI Coding (which is still incredibly useful). Check out the documentation [here](https://aider.chat/docs/scripting.html).
+## Repository Overview
+
+```
+README.md                 – main instructions and script descriptions
+claude_code_is_programmable_*.{sh,js,py} – Claude Code examples
+voice_to_claude_code.py   – voice-driven Claude Code assistant
+anthropic_search.py       – web search via Claude with optional domain filtering
+bonus/                    – advanced Notion + OpenAI Agent SDK demos
+ai_docs/                  – reference documentation for Claude Code and tools
+tests/                    – pytest integration test
+archive/aider             – archived examples that used Aider
+```
+
+Use the `reset.sh` script to clean up files created by the demos.
 
 ## Setup
 
@@ -71,14 +84,12 @@ You can also use [Aider](https://aider.chat/) as a programmable ai coding tool t
   ```bash
   sh claude_code_is_programmable_1.sh
   ```
-- `aider_is_programmable_1.sh`: Similar script using Aider to create a "hello.js" file.
-  ```bash
-  sh aider_is_programmable_1.sh
-  ```
 - `reset.sh`: Utility script to clean up branches and directories created by the demo scripts.
   ```bash
   sh reset.sh
   ```
+
+Archived examples that used the Aider tool are now located in [`archive/aider`](archive/aider).
 
 ### Python Files
 - `claude_code_is_programmable_2.py`: Python script that executes Claude Code to create a TypeScript CLI todo app, with permissions for Edit, Replace, Bash, and Create tools.
@@ -89,10 +100,6 @@ You can also use [Aider](https://aider.chat/) as a programmable ai coding tool t
   ```bash
   uv run claude_code_is_programmable_3.py "My Notion Page"
   ```
-- `aider_is_programmable_2.py`: Python script that uses Aider to create a TypeScript todo application with git operations.
-  ```bash
-  uv run aider_is_programmable_2.py
-  ```
 - `anthropic_search.py`: A self-contained Python script for searching the web using Anthropic's Claude AI with web search capabilities.
   ```bash
   ./anthropic_search.py "your search query"
@@ -102,10 +109,6 @@ You can also use [Aider](https://aider.chat/) as a programmable ai coding tool t
 - `claude_code_is_programmable_2.js`: JavaScript version of the Claude Code script that creates a TypeScript todo app, with permissions for Edit, Replace, Bash, and Create tools.
   ```bash
   bun claude_code_is_programmable_2.js
-  ```
-- `aider_is_programmable_2.js`: JavaScript version of the Aider script for creating a TypeScript todo app with git operations.
-  ```bash
-  bun aider_is_programmable_2.js
   ```
 
 ### Voice to Claude Code
@@ -219,6 +222,15 @@ The script produces:
 - Each search counts as one use, regardless of the number of results returned
 - Searches cost $10 per 1,000 searches, plus standard token costs for search-generated content
 - Domain filtering doesn't need https:// prefixes and automatically includes subdomains
+
+## Learning Path
+
+1. **Run the simple scripts**: Start with `claude_code_is_programmable_1.sh` and `claude_code_is_programmable_2.py`.
+2. **Understand Notion integration**: Study `claude_code_is_programmable_3.py` and the scripts in the `bonus/` directory.
+3. **Explore voice control** using `voice_to_claude_code.py`.
+4. **Experiment with web search** via `anthropic_search.py`.
+5. **Check the docs** in `ai_docs/` for details on Claude Code and the OpenAI Agents SDK.
+6. **Advance to agentic workflows** with the Notion agent in `bonus/`.
 
 Built with ❤️ by [IndyDevDan](https://www.youtube.com/@indydevdan) with [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview), and [Principled AI Coding](https://agenticengineer.com/principled-ai-coding)
 
